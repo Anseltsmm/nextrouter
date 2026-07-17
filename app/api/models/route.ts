@@ -1,3 +1,4 @@
+// app/api/models/route.ts
 import { PROVIDER_URL, PROVIDER_KEY } from "@/lib/provider"
 
 export async function GET() {
