@@ -1,6 +1,8 @@
 // app/api/chat/route.ts
 import { PROVIDER_URL, PROVIDER_KEY } from "@/lib/provider"
 import { verifyToken } from "@/lib/jwt"
+export const dynamic = "force-dynamic"
+
 
 export async function POST(req: Request) {
   const auth = req.headers.get("authorization")
