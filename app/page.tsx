@@ -1,9 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import type { AIModel } from "@/lib/models"
 
 export default function Home() {
-  const [models, setModels] = useState([])
+  const [models, setModels] = useState<AIModel[]>([])
   const [model, setModel] = useState("")
   const [msg, setMsg] = useState("")
   const [res, setRes] = useState("")
