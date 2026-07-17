@@ -1,5 +1,6 @@
 // app/api/auth/login/route.ts
 import { signToken } from "@/lib/jwt"
+export const dynamic = "force-dynamic"
 
 export async function POST(req: Request) {
   const { username, password } = await req.json()
