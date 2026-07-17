@@ -1,6 +1,15 @@
+// app/api/chat/route.ts
 import { PROVIDER_URL, PROVIDER_KEY } from "@/lib/provider"
+import { verifyToken } from "@/lib/jwt"
 
 export async function POST(req: Request) {
+  const auth = req.headers.get("authorization")
+  const token = auth?.split(" ")[1]
+
+  if (!verifyToken(token)) {
+    return Response.json({ error: "unauthorized" }, { status: 401 })
+  }
+
   const body = await req.json()
 
   const res = await fetch(`${PROVIDER_URL}/chat/completions`, {
