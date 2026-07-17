@@ -1,2 +1,3 @@
 PROVIDER_URL=https://router.bynara.id/v1
 PROVIDER_KEY=sk-nry-loVIK69OyYkzuPBMhXNXYz5i7ewwc5VR_4eE32fOyY4
+JWT_SECRET=rahasia_kamu
